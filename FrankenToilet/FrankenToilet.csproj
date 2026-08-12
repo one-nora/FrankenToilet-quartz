@@ -85,6 +85,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="PluginConfigurator">
+      <HintPath>$(UltrakillDir)BepInEx/plugins/PluginConfigurator/PluginConfigurator.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
+    </Reference>
+    
     <Reference Include="Assembly-CSharp">
       <HintPath>$(UltrakillDir)ULTRAKILL_Data/Managed/Assembly-CSharp.dll</HintPath>
       <Private>false</Private>

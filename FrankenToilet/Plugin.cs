@@ -21,11 +21,13 @@ public sealed class Plugin : BaseUnityPlugin
 
     private void Awake()
     {
-        
         Logger = base.Logger;
         InputSystem.RegisterProcessor<ScaleVector2DeltaTimeProcessor>();
         LogInfo("Welcome to Frankenstein's Toilet...");
-        gameObject.hideFlags = HideFlags.DontSaveInEditor;
+        gameObject.hideFlags = HideFlags.HideAndDontSave;
+        
+        ConfigManager.Initialize();
+        
         var harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
         var entryPointMethods = new List<MethodInfo>();
         var mixinClasses = new List<Type>();

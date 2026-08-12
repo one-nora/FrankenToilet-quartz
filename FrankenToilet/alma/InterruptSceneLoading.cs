@@ -14,8 +14,6 @@ namespace FrankenToilet.alma;
 [EntryPoint]
 internal class InterruptSceneLoading
 {
-    static int chanceOfJumpscare = 15; //in percentage
-
     [EntryPoint]
     private static void Start()
     {
@@ -41,7 +39,7 @@ internal class InterruptSceneLoading
         public static bool Prefix()
         {
             int percentage = new System.Random().Next(1, 101);
-            if (percentage <= chanceOfJumpscare)
+            if (percentage <= (int)ConfigManager.alma.LevelJumpscareChance.value)
             {
                 if (SceneHelper.CurrentScene != "Bootstrap")
                 {

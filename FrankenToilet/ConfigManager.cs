@@ -1,3 +1,4 @@
+using System;
 using PluginConfig.API;
 using PluginConfig.API.Fields;
 
@@ -33,9 +34,20 @@ public static class ConfigManager
         ConfigPanel somebillyPanel = new ConfigPanel(config.rootPanel, "somebilly", "somebilly_panel");
         ConfigPanel triggeredidiotPanel = new ConfigPanel(config.rootPanel, "triggeredidiot", "triggeredidiot_panel");
         
+        alma.FillPanel(almaPanel);
         Plonk.FillPanel(PlonkPanel);
+        
     }
     
+    public static class alma
+    {
+        public static FloatSliderField LevelJumpscareChance;
+
+        public static void FillPanel(ConfigPanel configPanel)
+        {
+            LevelJumpscareChance = new FloatSliderField(configPanel, "Level jumpscare chance", "alma.LevelJumpscareChance", new Tuple<float, float>(0f, 100f), 15f, 0);
+        }
+    }
     
     public static class Plonk
     {

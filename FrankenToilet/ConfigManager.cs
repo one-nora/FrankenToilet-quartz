@@ -32,5 +32,24 @@ public static class ConfigManager
         ConfigPanel prideuniquePanel = new ConfigPanel(config.rootPanel, "prideunique", "prideunique_panel");
         ConfigPanel somebillyPanel = new ConfigPanel(config.rootPanel, "somebilly", "somebilly_panel");
         ConfigPanel triggeredidiotPanel = new ConfigPanel(config.rootPanel, "triggeredidiot", "triggeredidiot_panel");
+        
+        Plonk.FillPanel(PlonkPanel);
+    }
+    
+    
+    public static class Plonk
+    {
+        public static BoolField EnableGravitySwapOnJump;
+        public static BoolField EnableRandomGravitySwapOnTime;
+        public static FloatField RandomGravitySwapMinTime;
+        public static FloatField RandomGravitySwapMaxTime;
+        
+        public static void FillPanel(ConfigPanel configPanel)
+        {
+            EnableGravitySwapOnJump = new BoolField(configPanel, "Enable random gravity swap on jump", "Plonk.EnableGravitySwapOnJump", true);
+            EnableRandomGravitySwapOnTime = new BoolField(configPanel, "Enable random gravity swap on time", "Plonk.EnableRandomGravitySwapOnTime", true);
+            RandomGravitySwapMinTime = new FloatField(configPanel, "Random gravity swap minimum time (in seconds)", "Plonk.RandomGravitySwapMinTime", 1f);
+            RandomGravitySwapMaxTime = new FloatField(configPanel, "Random gravity swap maximum time (in seconds)", "Plonk.RandomGravitySwapMaxTime", 10f);
+        }
     }
 }

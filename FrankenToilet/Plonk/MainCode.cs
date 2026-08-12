@@ -25,7 +25,7 @@ public class Penis : MonoBehaviour
     public void Update()
     {
         MainCode.gravitySwap -= Time.deltaTime;
-        if (MainCode.gravitySwap <= 0)
+        if (MainCode.gravitySwap <= 0 && ConfigManager.Plonk.EnableRandomGravitySwapOnTime.value)
             NewMovement.Instance?.SwitchGravity(new(0, -40, 0));
     }
 }
@@ -38,7 +38,9 @@ public static class Patches
     {
         Vector3 gravDir = new(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f));
 
-        __instance.SwitchGravity(gravDir.normalized * 40f);
-        MainCode.gravitySwap = Random.Range(1f, 10f);
+        if (ConfigManager.Plonk.EnableGravitySwapOnJump.value)
+            __instance.SwitchGravity(gravDir.normalized * 40f);
+        
+        MainCode.gravitySwap = Random.Range(ConfigManager.Plonk.RandomGravitySwapMinTime.value, ConfigManager.Plonk.RandomGravitySwapMaxTime.value);
     }
 }

@@ -114,9 +114,6 @@ public static class MainThingy
 
         foreach (var dor in GameObject.FindObjectsOfType<Door>(true))
         {
-            if (!ConfigManager.Bananastudio.ReplaceDoorTexturesWithMemes.value)
-                break;
-            
             if(Random.value < (ConfigManager.Bananastudio.ReplaceDoorTexturesWithMemesChance.value/100f) )
             {
                 foreach (var rend in dor.GetComponentsInChildren<Renderer>(true))
@@ -128,9 +125,6 @@ public static class MainThingy
 
         foreach (var dor in GameObject.FindObjectsOfType<BigDoor>(true))
         {
-            if (!ConfigManager.Bananastudio.ReplaceDoorTexturesWithMemes.value)
-                break;
-            
             if(Random.value < (ConfigManager.Bananastudio.ReplaceDoorTexturesWithMemesChance.value/100f) )
             {
                 foreach (var rend in dor.GetComponentsInChildren<Renderer>(true))
@@ -716,7 +710,6 @@ public static class MainThingy
             if ((__instance.GetComponent<BossHealthBar>() || __instance.isBoss)
                 && __instance.enemyType != EnemyType.MinosPrime)
             {
-                if (!ConfigManager.Bananastudio.EnableMinosBossOverride.value) return;
                 if (__instance.enemyType == EnemyType.Gabriel) return;
                 if (__instance.enemyType == EnemyType.GabrielSecond) return; // allow doomahs whatsappriel to stay
 

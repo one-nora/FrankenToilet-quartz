@@ -59,15 +59,12 @@ public static class ConfigManager
         public static BoolField EnablePlayerBuffs;
         public static BoolField EnableSpecialBossHealthBars;
 
-        public static BoolField ReplaceDoorTexturesWithMemes;
         public static FloatSliderField ReplaceDoorTexturesWithMemesChance;
+        public static FloatSliderField MinosOverrideChance;
         
         public static BoolField EnableEVILV1;
         public static FloatSliderField EvilV1SpawnChance;
 
-        public static BoolField EnableMinosBossOverride;
-        public static FloatSliderField MinosOverrideChance;
-        
         public static BoolField EnableImplosionsOnEnemyDeath;
         public static FloatField ImplosionRadius;
         
@@ -78,18 +75,13 @@ public static class ConfigManager
             EnablePlushiesFalling = new BoolField(configPanel, "Enable plushies falling on the main menu", "Bananastudio.EnablePlushiesFalling", true);
             EnablePlayerBuffs = new BoolField(configPanel, "Enable player buffs", "Bananastudio.EnablePlayerBuffs", true);
             EnableSpecialBossHealthBars = new BoolField(configPanel, "Enable special boss health bars", "Bananastudio.EnableSpecialBossHealthBars", true);
-            
-            new ConfigHeader(configPanel, "Meme doors Settings");
-            ReplaceDoorTexturesWithMemes = new BoolField(configPanel, "Replace door textures with memes", "Bananastudio.ReplaceDoorTexturesWithMemes", true);
-            ReplaceDoorTexturesWithMemesChance = new FloatSliderField(configPanel, "Chance to replace door", "Bananastudio.ReplaceDoorTexturesWithMemesChance", new Tuple<float, float>(0f, 100f), 75f, 0);
+
+            ReplaceDoorTexturesWithMemesChance = new FloatSliderField(configPanel, "Chance to replace door with meme textures", "Bananastudio.ReplaceDoorTexturesWithMemesChance", new Tuple<float, float>(0f, 100f), 75f, 0);
+            MinosOverrideChance = new FloatSliderField(configPanel, "Override boss with minos chance", "Bananastudio.MinosOverrideChance", new Tuple<float, float>(0f, 100f), 55f, 0);
             
             new ConfigHeader(configPanel, "Evil v1 Settings");
             EnableEVILV1 = new BoolField(configPanel, "Enable evil V1", "Bananastudio.EnableEVILV1", true);
             EvilV1SpawnChance = new FloatSliderField(configPanel, "Evil v1 spawn chance (the rest of the chance is used for player buffs)", "Bananastudio.EVILV1SpawnChance", new Tuple<float, float>(0f, 100f), 35f, 0);
-            
-            new ConfigHeader(configPanel, "Minos boss override Settings");
-            EnableMinosBossOverride = new BoolField(configPanel, "Enable minos boss override", "Bananastudio.EnableMinosBossOverride", true);
-            MinosOverrideChance = new FloatSliderField(configPanel, "Minos override chance", "Bananastudio.MinosOverrideChance", new Tuple<float, float>(0f, 100f), 55f, 0);
             
             new ConfigHeader(configPanel, "Implosion Settings");
             EnableImplosionsOnEnemyDeath = new BoolField(configPanel, "Enable implosions on enemy death", "Bananastudio.EnableImplosionsOnEnemyDeath", true);

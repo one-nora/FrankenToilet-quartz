@@ -9,6 +9,8 @@ public class AchievementManager
 {
     public static void ExecuteAchievement(string name, string description, string iconPath = "")
     {
+        if (!ConfigManager.Bananastudio.EnableAchievements.value) return;
+        
         if (MainThingy.frankenCanvas == null) return;
 
         GameObject AchievementTemplate = MainThingy.frankenCanvas.transform.Find("AchievementStuff/" +

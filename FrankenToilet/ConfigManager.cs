@@ -38,6 +38,7 @@ public static class ConfigManager
         alma.FillPanel(almaPanel);
         Bananastudio.FillPanel(BananastudioPanel);
         BlaixenU.FillPanel(BlaixenUPanel);
+        bobthecorn.FillPanel(bobthecornPanel);
         Plonk.FillPanel(PlonkPanel);
     }
     
@@ -100,6 +101,16 @@ public static class ConfigManager
             EnablePopups = new BoolField(configPanel, "Enable popups on screen", "BlaixenU.EnablePopups", true);
             PopupsMinSpawnTime = new IntField(configPanel, "Popups min spawn time", "BlaixenU.PopupsMinSpawnTime", 5);
             PopupsMaxSpawnTime = new IntField(configPanel, "Popups max spawn time", "BlaixenU.PopupsMaxSpawnTime", 15);
+        }
+    }
+    
+    public static class bobthecorn
+    {
+        public static BoolField EnableUltraClicker;
+
+        public static void FillPanel(ConfigPanel configPanel)
+        {
+            EnableUltraClicker = new BoolField(configPanel, "Enable ultra clicker (available on sandbox)", "bobthecorn.EnableUltraClicker", true);
         }
     }
     

@@ -38,7 +38,10 @@ class Boot
     }
     static void OnSceneLoaded(Scene scene, Scene mode)
     {
-        if (mode.name == "b3e7f2f8052488a45b35549efb98d902")
+        if (!ConfigManager.bobthecorn.EnableUltraClicker.value)
+            return;
+        
+        if (mode.name == "b3e7f2f8052488a45b35549efb98d902") // sandbox
         {
             if (UltraClicker.instance == null)
             {
@@ -791,6 +794,9 @@ public class Patches
     [HarmonyPostfix]
     public static void Start(ShopZone __instance)
     {
+        if (!ConfigManager.bobthecorn.EnableUltraClicker.value)
+            return;
+        
         Transform trans = UltraClicker.FindDeepChildByPathIncludeInactive(__instance.transform, "Canvas/Background");
         Transform yoinkenemyObject = UltraClicker.FindDeepChildByPathIncludeInactive(trans, "Main Panel/Enemies");
 

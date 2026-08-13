@@ -26,7 +26,7 @@ public static class Assets
     public static Font L_ComicSands;
 
     /// <summary> silly </summary>
-    public static Sprite UlraKil, ulakill, Flash, HeavyImg, Trans;
+    public static Sprite UlraKil, ulakill, HeavyImg, Trans;
 
     /// <summary> the budget was dropped for maurice </summary>
     public static GameObject MauriceBad;
@@ -63,7 +63,6 @@ public static class Assets
         Trans    = LoadAsset<Sprite>("Assets/trans.png");
         ulakill  = LoadAsset<Sprite>("Assets/title.png");
         HeavyImg = LoadAsset<Sprite>("Assets/heavy.png");
-        Flash    = LoadAsset<Sprite>("Assets/flash.jpeg");
         UlraKil  = LoadAsset<Sprite>("Assets/ultrakill wingdings.png");
 
         Amercia  = LoadAsset<VideoClip>("Assets/amercia.mp4");

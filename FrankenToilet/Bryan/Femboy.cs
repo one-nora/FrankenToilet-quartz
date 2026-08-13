@@ -34,7 +34,6 @@ public static class Femboy
             {
                 case "Main Menu": FindObject<Image>("Canvas/Main Menu (1)/LeftSide/Title").sprite = Assets.ulakill; break;
                 case "Level 0-1": FindObject<Image>("Canvas/HurtScreen/Title Sound/Image").sprite = Assets.UlraKil; break;
-                case "Level 7-1": FindObject<Image>("Canvas/HurtScreen/White").sprite = Assets.Flash; break;
 
                 case "Level 2-1":
                     Transform Room1Lighting = FindObject<Transform>("1 - New Opener/1 Nonstuff/Lighting");

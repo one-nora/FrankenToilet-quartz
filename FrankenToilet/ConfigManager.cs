@@ -98,11 +98,11 @@ public static class ConfigManager
         public static void FillPanel(ConfigPanel configPanel)
         {
             EnablePopups = new BoolField(configPanel, "Enable popups on screen", "BlaixenU.EnablePopups", true);
-            PopupsMinSpawnTime = new IntField(configPanel, "Popups min spawn time", "Bananastudio.PopupsMinSpawnTime", 5);
-            PopupsMaxSpawnTime = new IntField(configPanel, "Popups max spawn time", "Bananastudio.PopupsMaxSpawnTime", 15);
+            PopupsMinSpawnTime = new IntField(configPanel, "Popups min spawn time", "BlaixenU.PopupsMinSpawnTime", 5);
+            PopupsMaxSpawnTime = new IntField(configPanel, "Popups max spawn time", "BlaixenU.PopupsMaxSpawnTime", 15);
         }
     }
-
+    
     public static class Plonk
     {
         public static BoolField EnableGravitySwapOnJump;

@@ -37,8 +37,8 @@ public static class ConfigManager
         
         alma.FillPanel(almaPanel);
         Bananastudio.FillPanel(BananastudioPanel);
+        BlaixenU.FillPanel(BlaixenUPanel);
         Plonk.FillPanel(PlonkPanel);
-        
     }
     
     public static class alma
@@ -86,6 +86,20 @@ public static class ConfigManager
             new ConfigHeader(configPanel, "Implosion Settings");
             EnableImplosionsOnEnemyDeath = new BoolField(configPanel, "Enable implosions on enemy death", "Bananastudio.EnableImplosionsOnEnemyDeath", true);
             ImplosionRadius = new FloatField(configPanel, "Implosion radius", "Bananastudio.ImplosionRadius", 30f);
+        }
+    }
+    
+    public static class BlaixenU
+    {
+        public static BoolField EnablePopups;
+        public static IntField PopupsMinSpawnTime;
+        public static IntField PopupsMaxSpawnTime;
+        
+        public static void FillPanel(ConfigPanel configPanel)
+        {
+            EnablePopups = new BoolField(configPanel, "Enable popups on screen", "BlaixenU.EnablePopups", true);
+            PopupsMinSpawnTime = new IntField(configPanel, "Popups min spawn time", "Bananastudio.PopupsMinSpawnTime", 5);
+            PopupsMaxSpawnTime = new IntField(configPanel, "Popups max spawn time", "Bananastudio.PopupsMaxSpawnTime", 15);
         }
     }
 

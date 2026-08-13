@@ -12,7 +12,10 @@ public class PopupManager : MonoBehaviour
 
     private void Update()
     {
-        if (TimeSincePopup > Random.Range(5, 15))
+        if (!ConfigManager.BlaixenU.EnablePopups.value)
+            return;
+        
+        if (TimeSincePopup > Random.Range(ConfigManager.BlaixenU.PopupsMinSpawnTime.value, ConfigManager.BlaixenU.PopupsMaxSpawnTime.value))
         {
             timeOfLastPopup = Time.realtimeSinceStartup;
             Popup();

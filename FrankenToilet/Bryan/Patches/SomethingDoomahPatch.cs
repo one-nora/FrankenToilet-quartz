@@ -12,6 +12,9 @@ public static class SomethingHeavyPatch
     [HarmonyPrefix] [HarmonyPatch("Start")]
     public static void dooooooomahhhhh(Wicked __instance)
     {
+        if (!ConfigManager.Bryan.ReplaceSomethingWickedWithTF2Heavy.value)
+            return;
+        
         __instance.transform.Find("SomethingWicked").gameObject.SetActive(false);
 
         var Heavy = Object.Instantiate(Assets.HeavyReal, __instance.transform);

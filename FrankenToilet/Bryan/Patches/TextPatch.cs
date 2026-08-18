@@ -12,7 +12,10 @@ public static class TextMeshProUGUIPatch
     /// <summary> Replace font with sand + fucker </summary>
     [HarmonyPrefix] [HarmonyPatch("Awake")] [HarmonyPatch("OnEnable")]
     public static void ChangeFontAndFUck(TextMeshProUGUI __instance)
-    { 
+    {
+        if (!ConfigManager.Bryan.ReplaceTextFonts.value)
+            return;
+        
         __instance.font = Assets.ComicSands ?? __instance.font;
         
         if (__instance.gameObject.GetComponent<TextFucker>() == null)
@@ -28,6 +31,9 @@ public static class LegacyTextPatch
     [HarmonyPrefix] [HarmonyPatch("OnEnable")]
     public static void ChangeFontAndFuck(Text __instance)
     {
+        if (!ConfigManager.Bryan.ReplaceTextFonts.value)
+            return;
+        
         __instance.font = Assets.L_ComicSands ?? __instance.font;
 
         if (__instance.gameObject.GetComponent<TextFucker>() == null)

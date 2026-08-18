@@ -12,6 +12,9 @@ public static class HeavySkullPatch
     [HarmonyPrefix] [HarmonyPatch("Awake")]
     public static void heeeeavvvvvvvvvyyyy2(Skull __instance)
     {
+        if(!ConfigManager.Bryan.EnableTF2HeavySkulls.value)
+            return;
+        
         Transform oldSkull = __instance.transform.Find("NewSkull");
         oldSkull.gameObject.SetActive(false);
 

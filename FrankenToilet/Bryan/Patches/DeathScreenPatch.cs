@@ -11,6 +11,8 @@ public static class DeathScreenPatch
     [HarmonyPostfix] [HarmonyPatch("Start")]
     public static void oiweoufjds(LaughingSkull __instance)
     {
+        if (!ConfigManager.Bryan.EnableCustomSkullDeathScreen.value)
+            return;
         __instance.GetComponent<Animator>().runtimeAnimatorController = Assets.LaughingAnim;
         __instance.gameObject.AddComponent<LaughLaugh>();
 
@@ -47,7 +49,7 @@ public class LaughLaugh : MonoBehaviour
     {
         Aud.Play();
 
-        bool trans = Random.Range(0, 4) == 0;
+        bool trans = Random.Range(1, 101) <= (int)ConfigManager.Bryan.TransFlagOnDeathScreenChance.value;
         Skull.color = trans ? Color.black : Color.white;
         Background.color = trans ? Color.white : Color.black;
     }

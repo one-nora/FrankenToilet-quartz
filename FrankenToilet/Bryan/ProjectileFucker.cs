@@ -18,7 +18,7 @@ public class ProjectileFucker : MonoBehaviour
     /// <summary> Check if we should dupe. </summary>
     public void Update()
     {
-        if (Time.time - time > 0.5f)
+        if (Time.time - time > ConfigManager.Bryan.DuplicateProjectilesTime.value)
         {
             enabled = false; // disable this component so we dont keep duping over and over
 

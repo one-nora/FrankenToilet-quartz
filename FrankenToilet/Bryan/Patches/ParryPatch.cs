@@ -8,6 +8,11 @@ using UnityEngine.UI;
 public static class ParryPatch
 {
     [HarmonyPrefix] [HarmonyPatch("ParryFlash")]
-    public static void rghsrhgnfgrf(TimeController __instance) =>
+    public static void rghsrhgnfgrf(TimeController __instance)
+    {
+        if (!ConfigManager.Bryan.EnableTF2HeavyParryFlash.value)
+            return;
+        
         __instance.parryFlash?.GetComponent<Image>().sprite = Assets.HeavyImg;
+    }
 }

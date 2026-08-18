@@ -12,6 +12,9 @@ public static class MuaricePATCH
     [HarmonyPrefix] [HarmonyPatch("Awake")]
     public static void lowquality(MaliciousFace __instance)
     {
+        if(!ConfigManager.Bryan.ReplaceMauriceModel.value)
+            return;
+        
         SkinnedMeshRenderer mr = __instance.transform.Find("MaliciousFace/MaliciousFace").GetComponent<SkinnedMeshRenderer>();
         mr.enabled = false;
 

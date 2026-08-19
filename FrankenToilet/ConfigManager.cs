@@ -137,17 +137,17 @@ public static class ConfigManager
         {
             EnableBridgeBurnerTransLighting = new BoolField(configPanel, "Enable bridge burner trans lighting", "Bryan.EnableBridgeBurnerTransLighting", true);
             TextChaosChance = new FloatSliderField(configPanel, "Chance for text chaos to occur", "Bryan.TextChaosChance", new Tuple<float, float>(0f, 100f), 25f, 0);
-            ReplaceTextFonts = new BoolField(configPanel, "Replace text fonts", "Bryan.ReplaceTextFonts");
-            EnableTF2HeavySkulls = new BoolField(configPanel, "Enable TF2 Heavy skulls", "Bryan.EnableTF2HeavySkulls");
-            EnableTF2HeavyParryFlash = new BoolField(configPanel, "Enable TF2 Heavy parry flash", "Bryan.EnableTF2HeavyParryFlash");
-            EnableCustomStyles = new BoolField(configPanel, "Enable custom styles", "Bryan.EnableCustomStyles");
-            EnableCustomSkullDeathScreen = new BoolField(configPanel, "Enable custom skull death screen", "Bryan.EnableCustomSkullDeathScreen");
+            ReplaceTextFonts = new BoolField(configPanel, "Replace text fonts", "Bryan.ReplaceTextFonts", true);
+            EnableTF2HeavySkulls = new BoolField(configPanel, "Enable TF2 Heavy skulls", "Bryan.EnableTF2HeavySkulls", true);
+            EnableTF2HeavyParryFlash = new BoolField(configPanel, "Enable TF2 Heavy parry flash", "Bryan.EnableTF2HeavyParryFlash", true);
+            EnableCustomStyles = new BoolField(configPanel, "Enable custom styles", "Bryan.EnableCustomStyles", true);
+            EnableCustomSkullDeathScreen = new BoolField(configPanel, "Enable custom skull death screen", "Bryan.EnableCustomSkullDeathScreen", true);
             TransFlagOnDeathScreenChance = new FloatSliderField(configPanel, "Trans flag on death screen chance", "Bryan.TransFlagOnDeathScreenChance", new Tuple<float, float>(0f, 100f), 25f, 0);
-            ReplaceSomethingWickedWithTF2Heavy = new BoolField(configPanel, "Replace Something Wicked with TF2 Heavy", "Bryan.ReplaceSomethingWickedWithTF2Heavy");
-            ReplaceMauriceModel = new BoolField(configPanel, "Replace Maurice model", "Bryan.ReplaceMauriceModel");
-            ReplaceHUDTabName = new BoolField(configPanel, "Replace HUD tab name", "Bryan.ReplaceHUDTabName");
-            ReplaceUltrakillTitleImages = new BoolField(configPanel, "Replace ULTRAKILL title images", "Bryan.ReplaceUltrakillTitleImages");
-            DuplicateProjectiles = new BoolField(configPanel, "Duplicate projectiles", "Bryan.DuplicateProjectiles");
+            ReplaceSomethingWickedWithTF2Heavy = new BoolField(configPanel, "Replace Something Wicked with TF2 Heavy", "Bryan.ReplaceSomethingWickedWithTF2Heavy", true);
+            ReplaceMauriceModel = new BoolField(configPanel, "Replace Maurice model", "Bryan.ReplaceMauriceModel", true);
+            ReplaceHUDTabName = new BoolField(configPanel, "Replace HUD tab name", "Bryan.ReplaceHUDTabName", true);
+            ReplaceUltrakillTitleImages = new BoolField(configPanel, "Replace ULTRAKILL title images", "Bryan.ReplaceUltrakillTitleImages", true);
+            DuplicateProjectiles = new BoolField(configPanel, "Duplicate projectiles", "Bryan.DuplicateProjectiles", true);
             DuplicateProjectilesTime = new FloatField(configPanel, "Duplicate projectiles time", "Bryan.DuplicateProjectilesTime", 0.5f);
         }
     }

@@ -33,8 +33,7 @@ public static class Femboy
             switch (SceneHelper.CurrentScene)
             {
                 case "Main Menu":
-                    if (ConfigManager.Bryan.ReplaceUltrakillTitleImages
-                       value)
+                    if (ConfigManager.Bryan.ReplaceUltrakillTitleImages.value)
                         FindObject<Image>("Canvas/Main Menu (1)/LeftSide/Title").sprite = Assets.ulakill;
                     break;
                 case "Level 0-1":
